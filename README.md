@@ -31,10 +31,10 @@ The configuration details of each machine may be found below.
 
 | Name                     | Function   | IO Address | Operation System           |
 |--------------------------|------------|------------|----------------------------|
-| Jump-Box-<br>Provisioner | Gateway    | 10.4.0.4   | Linux Ubuntu 18.04-<br>LTS |
-| Web-1                    | Web Server | 10.4.0.5   | Linux Ubuntu 18.04-<br>LTS |
-| Web-2                    | Web Server | 10.4.0.6   | Linux Ubuntu 18.04-<br>LTS |
-| ELK-SERVER               | Kibana IDS | 10.5.0.4   | Linux Ubuntu 18.04-<br>LTS |
+| Jump-Box-<br>Provisioner | Gateway    | 10.3.0.4   | Linux Ubuntu 18.04-<br>LTS |
+| Web-1                    | Web Server | 10.3.0.5   | Linux Ubuntu 18.04-<br>LTS |
+| Web-2                    | Web Server | 10.3.0.6   | Linux Ubuntu 18.04-<br>LTS |
+| ELK-SERVER               | Kibana IDS | 10.4.0.4   | Linux Ubuntu 18.04-<br>LTS |
 
 ### Access Policies
 
@@ -53,10 +53,10 @@ A summary of the access policies in place can be found in the table below.
 
 | Name                     | Publicly <br>Accessible | Function   | IP Address          |
 |--------------------------|-------------------------|------------|---------------------|
-| Jump-Box-<br>Provisioner | Yes                     | SSH        | 10.4.0.4<br>168.62.218.194 |
-| Web-1                    | No                      | Web Server | 10.4.0.5            |
-| Web-2                    | No                      | Web Server | 10.4.0.6            |
-| ELK-SERVER               | Yes                     | Kibana IDS | 10.5.0.4<br>40.117.140.8 |
+| Jump-Box-<br>Provisioner | Yes                     | SSH        | 10.3.0.4<br>168.62.218.194 |
+| Web-1                    | No                      | Web Server | 10.3.0.5            |
+| Web-2                    | No                      | Web Server | 10.3.0.6            |
+| ELK-SERVER               | Yes                     | Kibana IDS | 10.4.0.4<br>40.117.140.8 |
 
 ### Elk Configuration
 
@@ -78,8 +78,8 @@ The following screenshot displays the result of running `docker ps` after succes
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 
-- Web-1: 10.4.0.5
-- Web-1: 10.4.0.6
+- Web-1: 10.3.0.5
+- Web-1: 10.3.0.6
 
 We have installed the following Beats on these machines:
 
@@ -98,8 +98,8 @@ SSH into the control node and follow the steps below:
 - Copy the elk_playbook.yml file to /etc/Ansible.
 - Update the host file to include:
   - [webservers]
-    - 10.4.0.5 ansible_python_interpreter=/usr/bin/python3
-    - 10.4.0.6 ansible_python_interpreter=/usr/bin/python3
+    - 10.3.0.5 ansible_python_interpreter=/usr/bin/python3
+    - 10.3.0.6 ansible_python_interpreter=/usr/bin/python3
   - [elkservers]
-    - 10.5.0.4 ansible_python_interpreter=/usr/bin/python3
+    - 10.4.0.4 ansible_python_interpreter=/usr/bin/python3
 - Run the playbook, and navigate to PLAY RECAP to check that the installation worked as expected. Navigate to Kibana using 40.117.140.8:5601 to chek that the ELK Server is running.
