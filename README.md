@@ -34,7 +34,7 @@ The configuration details of each machine may be found below.
 | Jump-Box-<br>Provisioner | Gateway    | 10.3.0.4   | Linux Ubuntu 18.04-<br>LTS |
 | Web-1                    | Web Server | 10.3.0.5   | Linux Ubuntu 18.04-<br>LTS |
 | Web-2                    | Web Server | 10.3.0.6   | Linux Ubuntu 18.04-<br>LTS |
-| ELK-SERVER               | Kibana IDS | 10.4.0.4   | Linux Ubuntu 18.04-<br>LTS |
+| ELK-SERVER               | Kibana IDS | 10.5.0.4   | Linux Ubuntu 18.04-<br>LTS |
 
 ### Access Policies
 
@@ -56,7 +56,7 @@ A summary of the access policies in place can be found in the table below.
 | Jump-Box-<br>Provisioner | Yes                     | SSH        | 10.3.0.4<br>168.62.218.194 |
 | Web-1                    | No                      | Web Server | 10.3.0.5            |
 | Web-2                    | No                      | Web Server | 10.3.0.6            |
-| ELK-SERVER               | Yes                     | Kibana IDS | 10.4.0.4<br>40.117.140.8 |
+| ELK-SERVER               | Yes                     | Kibana IDS | 10.5.0.4<br>40.121.135.162 |
 
 ### Elk Configuration
 
@@ -101,5 +101,5 @@ SSH into the control node and follow the steps below:
     - 10.3.0.5 ansible_python_interpreter=/usr/bin/python3
     - 10.3.0.6 ansible_python_interpreter=/usr/bin/python3
   - [elkservers]
-    - 10.4.0.4 ansible_python_interpreter=/usr/bin/python3
-- Run the playbook, and navigate to PLAY RECAP to check that the installation worked as expected. Navigate to Kibana using 40.117.140.8:5601 to chek that the ELK Server is running.
+    - 10.5.0.4 ansible_python_interpreter=/usr/bin/python3
+- Run the playbook, and navigate to PLAY RECAP to check that the installation worked as expected. Navigate to Kibana using 40.121.135.162:5601 to chek that the ELK Server is running.
