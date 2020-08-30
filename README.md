@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-- (Diagrams/ELK_Stack_Network_Diagram.png)
+- (Images/ELK_Stack_Network_Diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YML file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -28,7 +28,6 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - Filebeat watches for and collects log files
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name                     | Function   | IO Address | Operation System           |
 |--------------------------|------------|------------|----------------------------|
